@@ -17,9 +17,11 @@
     }
 
     .navbar {
-        border: none;
+        /* border: none;
         border-radius: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5); */
+        color: green;
+        background-color: black
     }
 
     hr {
@@ -32,28 +34,103 @@
         border-width: 1px;
     }
 
-    img {
-        /* width: auto;
-        height: 50; */
-        margin: auto
+    /* .carousel {
+        width: 640px;
+        height: 360px;
+
     }
+
+    .carousel-inner>.item>img {
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        margin-bottom: auto
+    } */
 </style>
 
 <body>
     <div class="container">
         <!-- nave bar -->
         <div class="navbar navbar-default navbar-fixed-top">
-            <!-- links go here 
-                * Make should be solid top position and transparent on scroll.
-                * links should highlight based on current page position.
-            -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Reborn Tile & Stone</a>
+                <a class="navbar-brand" href="#">Sorority Slayers</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#section-logo">Home</a>
+                    </li>
+                    <li>
+                        <a href="#section-trailer">About Us</a>
+                    </li>
+
+                    <!-- episodes -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Bathroom</a>
+                            </li>
+                            <li>
+                                <a href="#">Kitchen</a>
+                            </li>
+                            <li>
+                                <a href="#">Floor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#section-behind-the-scenes">Testimonials</a>
+                    </li>
+                    <li>
+                        <a href="#section-episodes">About Us</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#section-subscribe">
+                                    <span class="glyphicon glyphicon-film"></span> Subscribe</a>
+                            </li>
+                            <li>
+                                <a href="#section-message-us">
+                                    <span class="glyphicon glyphicon-pencil"></span> Message</a>
+                            </li>
+                            <li>
+                                <a href="#section-call-us">
+                                    <span class="glyphicon glyphicon-earphone"></span> Call</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://www.facebook.com/SororitySlayers/">
+                            <i class="fa fa-facebook-official" style="font-size:24px; color:white"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/sorority_slayers/?hl=en">
+                            <i class="fa fa-instagram" style="font-size:24px; color:white"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-youtube" style="font-size:24px; color:white"></i>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -85,15 +162,15 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="images\temp-pic-kitchen-2.png" alt="Kitchen 2">
+                            <img src="images\temp-pic-kitchen-2.png" alt="Kitchen 2" width="460" height="300">>
                         </div>
 
                         <div class="item">
-                            <img src="images\temp-pic-kitchen.jpg" alt="Kitchen 1">
+                            <img src="images\temp-pic-kitchen.jpg" alt="Kitchen 1" width="460" height="300">>
                         </div>
 
                         <div class="item">
-                            <img src="images\temp-pic-tile-setter.jpg" alt="Tile setter">
+                            <img src="images\temp-pic-tile-setter.jpg" alt="Tile setter" width="460" height="300">>
                         </div>
                     </div>
 
@@ -125,14 +202,7 @@
                         I really think they're tremendous." - President Trump</li>
 
                 </ul>
-                <p>Links</p>
-                <ul>
-                    <li>Yelp</li>
-                    <li>Instagram</li>
-                    <li>
-                        <a href="https://www.thumbtack.com/k/bathroom-tile-contractors/near-me/">Thumbtack</a>
-                    </li>
-                </ul>
+               
                 <p>About Us</p>
                 <ul>
                     <li>We are here to meet your tile and stone needs. Also ceramic.</li>
@@ -142,7 +212,14 @@
                     <li>(818) 555-1234</li>
                     <li>info@reborn-tile-and-stone</li>
                 </ul>
-
+                <p>Links</p>
+                <ul>
+                    <li>Yelp</li>
+                    <li>Instagram</li>
+                    <li>
+                        <a href="https://www.thumbtack.com/k/bathroom-tile-contractors/near-me/">Thumbtack</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
