@@ -1,3 +1,38 @@
 body {
-    background-color: grey;
+    margin-top: 78px;
+    background-color:beige;
+}
+
+.navbar {
+    /* border: none;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5); */
+    color: green;
+    background-color: black
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+h2 {
+    text-align: center
+}
+
+h3 {
+    text-align: center
+}
+
+.carousel-inner>.item>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto
 }

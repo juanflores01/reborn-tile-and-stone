@@ -9,49 +9,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src='https://use.edgefonts.net/frijole.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
 </head>
-<style>
-    body {
-        margin-top: 78px;
-        background-color: beige;
-    }
 
-    .navbar {
-        /* border: none;
-        border-radius: 0;
-        background-color: rgba(0, 0, 0, 0.5); */
-        color: green;
-        background-color: black
-    }
-
-    hr {
-        display: block;
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-        margin-left: auto;
-        margin-right: auto;
-        border-style: inset;
-        border-width: 1px;
-    }
-
-    h2 {
-        text-align: center
-    }
-
-    h3 {
-        text-align: center
-    }
-
-    .carousel-inner>.item>img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: auto;
-        margin-bottom: auto
-    }
-</style>
-
-<body>
+<body ng-controller="RebornController as reborn">
     <div class="container">
         <!-- nave bar -->
         <div class="navbar navbar-default navbar-fixed-top">
@@ -72,7 +40,7 @@
                         <a href="#section-about-us">About Us</a>
                     </li>
 
-                    <!-- episodes -->
+                    <!-- services -->
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
                             <span class="caret"></span>
@@ -91,9 +59,6 @@
                     </li>
                     <li>
                         <a href="#section-testimonials">Testimonials</a>
-                    </li>
-                    <li>
-                        <a href="#section-episodes">About Us</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
@@ -135,14 +100,15 @@
             </div>
         </div>
 
-        <!-- body here -->
+        <!-- Title -->
         <div class="row">
             <div class="col-md-12">
                 <h2>Reborn Tile & Stone</h2>
                 <hr>
             </div>
         </div>
-        <div class="row">
+        <!-- Carousel -->
+        <div class="row" ng-controller="CarouselController as carousel">
             <div class="col-md-12">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -157,11 +123,9 @@
                         <div class="item active">
                             <img src="images\temp-pic-kitchen-2.png" alt="Kitchen 2" width="460" height="300">
                         </div>
-
                         <div class="item">
                             <img src="images\temp-pic-kitchen.jpg" alt="Kitchen 1" width="460" height="300">
                         </div>
-
                         <div class="item">
                             <img src="images\temp-pic-tile-setter.jpg" alt="Tile setter" width="460" height="300">
                         </div>
@@ -179,6 +143,12 @@
                 </div>
                 <hr>
 
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="row">
+            <div class="col-md-12">
                 <h3 id="section-services">Services</h3>
                 <ul>
                     <li>Bathroom</li>
@@ -187,6 +157,11 @@
                     <li>Remodels</li>
                     <li>Repairs</li>
                 </ul>
+            </div>
+        </div>
+        <!-- Testimonials -->
+        <div class="row">
+            <div class="col-md-12">
                 <h3 id="section-testimonials">Testimonials</h3>
                 <ul>
                     <li>"Reborn is the best!" - Satisfied Sam</li>
@@ -195,18 +170,31 @@
                         Stone is truly one of the best, if not the best tile company out there. I've used them. Not in all
                         my building but some of them - they can't possibly tile them all. It's impossible. But, really -
                         I really think they're tremendous." - President Trump</li>
-
                 </ul>
-
+            </div>
+        </div>
+        <!-- About Us -->
+        <div class="row">
+            <div class="col-md-12">
                 <h3 id="section-about-us">About Us</h3>
                 <ul>
                     <li>We are here to meet your tile and stone needs. Also ceramic.</li>
                 </ul>
+            </div>
+        </div>
+        <!-- Contact Us -->
+        <div class="row">
+            <div class="col-md-12">
                 <h3 id="section-contact-us">Contact Us</h3>
                 <ul>
                     <li>(818) 555-1234</li>
                     <li>info@reborn-tile-and-stone</li>
                 </ul>
+            </div>
+        </div>
+        <!-- Links -->
+        <div class="row">
+            <div class="col-md-12">
                 <h3>Links</h3>
                 <ul>
                     <li>Yelp</li>
@@ -217,11 +205,10 @@
                 </ul>
             </div>
         </div>
-
-
     </div>
 
-    <script src="resume.js"></script>
+    <script src="scripts\script.js"></script>
+
 </body>
 
 </html>
