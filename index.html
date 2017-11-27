@@ -1,20 +1,17 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="rebornApp">
 
 <head>
     <title>Reborn Tile & Stone</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" href="styles.css">
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src='https://use.edgefonts.net/frijole.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
 </head>
@@ -34,14 +31,19 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="#section-logo">Home</a>
+                        <a href="#section-home">Home</a>
                     </li>
                     <li>
                         <a href="#section-about-us">About Us</a>
                     </li>
-
+                    <li>
+                        <a href="#section-team">The Team</a>
+                    </li>
                     <!-- services -->
-                    <li class="dropdown">
+                    <li>
+                        <a href="#section-services">Services</a>
+                    </li>
+                    <!-- <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services
                             <span class="caret"></span>
                         </a>
@@ -56,9 +58,15 @@
                                 <a href="#">Floor</a>
                             </li>
                         </ul>
+                    </li> -->
+                    <li>
+                        <a href="#section-work">Work</a>
                     </li>
                     <li>
                         <a href="#section-testimonials">Testimonials</a>
+                    </li>
+                    <li>
+                        <a href="#section-pricing">Pricing</a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact Us
@@ -82,12 +90,12 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="https://www.facebook.com/SororitySlayers/">
+                        <a href="">
                             <i class="fa fa-facebook-official" style="font-size:24px; color:white"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/sorority_slayers/?hl=en">
+                        <a href="">
                             <i class="fa fa-instagram" style="font-size:24px; color:white"></i>
                         </a>
                     </li>
@@ -145,6 +153,63 @@
 
             </div>
         </div>
+        <!-- About Us -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="section-about-us">About Us</h3>
+                <p>We've been in business for over 25 years and come from a lineage of builders.</p>
+
+            </div>
+        </div>
+        <!-- The Team -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="section-team">The Team</h3>
+                <div class="team-member">
+                    <div class="image" style="text-align:center">
+                        <img src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAV-AAAAJDZiYTNjYjE4LWU4YzYtNDc4Yy1iYzJjLTQ4MmY4YzFjYWUwZg.jpg">
+                    </div>
+                    <div class="info" style="text-align:center">
+                        <h3>Danny Nehme</h3>
+                        <div>OWNER</div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                    </div>
+                    <div class="social" style="text-align:center">
+                        <a href="#">
+                            <i class="fa fa-facebook fa-lg fa-fw"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-twitter fa-lg fa-fw"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-google-plus fa-lg fa-fw"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="team-member">
+                        <div class="image" style="text-align:center">
+                            <img src="https://media.licdn.com/media/AAEAAQAAAAAAAAQwAAAAJDRjNzE4ZTZiLTI4NjctNGIxYy04MmZjLWM4MzZkZTBhOGU3NA.jpg" height="auto" width="100">
+                        </div>
+                        <div class="info" style="text-align:center">
+                            <h3>Renata Nehme</h3>
+                            <div>OWNER</div>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
+                        </div>
+                        <div class="social" style="text-align:center">
+                            <a href="#">
+                                <i class="fa fa-facebook fa-lg fa-fw"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-twitter fa-lg fa-fw"></i>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-google-plus fa-lg fa-fw"></i>
+                            </a>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
 
         <!-- Services -->
         <div class="row">
@@ -156,6 +221,17 @@
                     <li>Floors</li>
                     <li>Remodels</li>
                     <li>Repairs</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Work -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3 id="section-team">Work</h3>
+                <ul>
+                    <img src="images\temp-pic-kitchen-2.png" alt="Kitchen 2" width="300" height="200">
+                    <img src="images\temp-pic-kitchen.jpg" alt="Kitchen 1" width="300" height="200">
+                    <img src="images\temp-pic-tile-setter.jpg" alt="Tile setter" width="300" height="200">
                 </ul>
             </div>
         </div>
@@ -173,15 +249,20 @@
                 </ul>
             </div>
         </div>
-        <!-- About Us -->
+        <!-- Pricing -->
         <div class="row">
             <div class="col-md-12">
-                <h3 id="section-about-us">About Us</h3>
+                <h3 id="section-pricing">Pricing</h3>
                 <ul>
-                    <li>We are here to meet your tile and stone needs. Also ceramic.</li>
+                    <li>Bathroom: $100</li>
+                    <li>Kitchen: $100</li>
+                    <li>Floors: $100</li>
+                    <li>Remodels: $100</li>
+                    <li>Repairs: $100</li>
                 </ul>
             </div>
         </div>
+
         <!-- Contact Us -->
         <div class="row">
             <div class="col-md-12">
