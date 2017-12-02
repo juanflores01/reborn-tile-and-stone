@@ -29,6 +29,9 @@ h3 {
     text-align: center
 }
 
+#myTestimonials{
+    border: solid
+}
 .carousel-inner>.item>img {
     display: block;
     margin-left: auto;
@@ -57,7 +60,7 @@ h3 {
   }
 
   #myTestimonials .carousel-control .glyphicon{ 
-    background: #333333;
+    background: #333333
     
   }
 
