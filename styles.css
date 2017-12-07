@@ -77,6 +77,12 @@ h3 {
     margin-bottom: 100px;
 }
 
+#section-contact-us{
+    /* background-color: yellow; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
 .footer {
     color: white;
     position: absolute;
