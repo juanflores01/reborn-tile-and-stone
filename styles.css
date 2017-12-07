@@ -5,7 +5,7 @@ html {
 
 body {
     margin-top: 60px;
-    background-color:beige;
+    background-color:whitesmoke ;
     margin-bottom: 60px;
     
 }
@@ -48,7 +48,7 @@ h3 {
 }
 
 #section-team {
-    background-color: teal;
+    background-color:azure  
 }
 
 /* .carousel-indicators{

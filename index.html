@@ -401,23 +401,6 @@
             </div>
         </div>
 
-        <!-- Pricing -->
-        <!-- <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 id="section-pricing">Pricing</h3>
-                    <ul>
-                        <li>Bathroom: $100</li>
-                        <li>Kitchen: $100</li>
-                        <li>Floors: $100</li>
-                        <li>Remodels: $100</li>
-                        <li>Repairs: $100</li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
-
-
         <!-- Contact Us -->
         <div class="container">
             <h3 id="section-contact-us">Contact Us</h3>
@@ -435,36 +418,168 @@
             </div>
         </div>
 
-        <!-- <div class="container">
-            <h3 id="section-message-us">Message Us</h3>
-            <div class="row">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="email">Full name</label>
-                        <div class="col-sm-5">
-                            <input type="email" class="form-control" id="text" placeholder="Enter full name">
-                        </div>
+        <div class="container">
+            <h3>Virtual Estimate</h3>
+            <!-- <div class="form-row">
+                <div class="col-md-12">
+                    <p>Please upload any pictures and submit room measurments to get the estimate process started.</p>
+                </div>
+            </div> -->
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputFirstName">First Name</label>
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="John">
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="email">Email:</label>
-                        <div class="col-sm-5">
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
-                        </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputLastName">Last Name</label>
+                        <input type="text" class="form-control" id="inputLastName" placeholder="Doe">
                     </div>
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="comment">Comment:</label>
-                        <div class="col-sm-5">
-                            <textarea class="form-control" rows="5" id="comment"></textarea>
-                        </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="johndoe@email.com">
                     </div>
-                                      <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputPhone">Phone Number</label>
+                        <input type="phone" class="form-control" id="inputPhone" placeholder="(818) 555-1234">
                     </div>
-                </form>
-            </div>
-        </div> -->
+                    <div class="form-group col-md-6">
+                        <label for="inputBestTimeToCall">Best time to call</label>
+                        <select id="inputBestTimeToCall" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Morning</option>
+                            <option>Noon</option>
+                            <option>Afternoon</option>
+                            <option>Evening</option>
+                            <option>Night</option>
+                            <option>...hours and minutes will come soon...</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-xs-6 col-md-6">
+                        <p>
+                            <strong>Add a space</strong>
+                        </p>
+                    </div>
+                    <div class="form-group col-xs-6 col-md-6">
+                        <button type="button" class="btn btn-primary">
+                            <strong>+</strong>
+                        </button>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputBestTimeToCall">Space</label>
+                        <select id="inputBestTimeToCall" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Bathroom</option>
+                            <option>Kitchen</option>
+                            <option>Living Room</option>
+                            <option>Hallway</option>
+                            <option>Deck</option>
+                            <option>Porch</option>
+                            <option>Pool</option>
+                            <option>Other (comment box here)</option>
+
+                        </select>
+                    </div>
+                </div>
+                <!-- <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="inputSide1" placeholder="This is the Other comment box">
+                    </div>
+                </div> -->
+                <div class="form-row">
+                    <div class="form-group col-md-2">
+                        <label for="inputBestTimeToCall">Surface</label>
+                        <select id="inputBestTimeToCall" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Floor</option>
+                            <option>Counter</option>
+                            <option>Back-splash</option>
+                            <option>Fireplace</option>
+                            <option>Other (comment box here)</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="inputSide1">Side 1</label>
+                        <input type="text" class="form-control" id="inputSide1" placeholder="inches">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <p>+</p>
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="inputSide1">Side 2</label>
+                        <input type="text" class="form-control" id="inputSide1" placeholder="inches">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <p>+</p>
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="inputSide1">Side 3</label>
+                        <input type="text" class="form-control" id="inputSide1" placeholder="inches">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <p>+</p>
+                    </div>
+                    <div class="form-group col-md-1">
+                        <label for="inputSide1">Side 4</label>
+                        <input type="text" class="form-control" id="inputSide1" placeholder="inches">
+                    </div>
+                    <div class="form-group col-md-1">
+                        <p>=</p>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputSide1">Total Measurement</label>
+                        <input type="text" class="form-control" id="inputSide1" placeholder="Total">
+                    </div>
+                </div>
+                <!-- <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="inputSide1" placeholder="This is the Other comment box">
+                    </div>
+                </div> -->
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputBestTimeToCall">Desired Material</label>
+                        <select id="inputBestTimeToCall" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>Tile</option>
+                            <option>Ceramic</option>
+                            <option>Slate</option>
+                            <option>Marble</option>
+                            <option>Travertine</option>
+                            <option>Other (comment box here)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-xs-6 col-md-2">
+                        <p>
+                            <strong>Upload pictures</strong>
+                        </p>
+                    </div>
+                    <div class="form-group col-xs-6 col-md-2">
+                        <button type="button" class="btn btn-primary">Upload File</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <button type="button" class="btn btn-success">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
 
         <!-- Links -->
