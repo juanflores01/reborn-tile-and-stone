@@ -44,7 +44,10 @@ h3 {
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    margin-bottom: auto
+    margin-bottom: auto;
+    width: auto;
+    height: 300px;
+    max-height: 300px 
 }
 
 #section-team {
@@ -86,6 +89,9 @@ h3 {
     padding-bottom: 50px;
 }
 
+#section-contact-us{
+    text-align: center
+}
 .footer {
     color: white;
     position: absolute;
