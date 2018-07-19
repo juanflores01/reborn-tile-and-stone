@@ -1,20 +1,83 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+
 body {
-    background-image: url("images/kitchen-inprog-blue.jpg");
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-    /* font-family: 'MS Gothic'; */
-    /* color: white; */
-
-    /**/
-    /*background-color: white;
-    color: black;
-    font-family: 'MS Gothic';*/
+    margin-top: 60px;
+    background-color:whitesmoke ;
+    margin-bottom: 60px;
+    
 }
 
 .navbar {
+    /* border: none;
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0.5); */
     color: green;
     background-color: black
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+h2 {
+    text-align: center
+}
+
+h3 {
+    text-align: center
+}
+
+
+.carousel-inner>.item>img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: auto;
+    height: 300px;
+    max-height: 300px 
+}
+
+
+
+#section-contact-us{
+    /* background-color: yellow; */
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center
+}
+
+
+.footer {
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+    text-align: center;
+    /* background-color: #f5f5f5; */
+    background-color: black;
+  }
+
+
+
+
+.thumbnail {margin-bottom:6px;}
+
+.carousel-control.left,.carousel-control.right{
+  background-image:none;
+  margin-top:10%;
+  width:5%;
 }
