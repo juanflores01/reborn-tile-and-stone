@@ -52,13 +52,13 @@
         <div class="container main-page">
             <div class="container">
                 <div class="jumbotron">
-                    <h1>Welcome to Reborn Tile & Stone</h1>
-                    <p>Servicing the Southland for over 20 years.</p>
+                    <h1>Reborn Tile & Stone</h1>
+                    <p>Serving the Southland for over 20 years.</p>
                 </div>
                 <!-- <p>This is some text.</p> 
                 <p>This is another text.</p>  -->
             </div>
-    
+
             <!-- Title -->
             <!-- <div class="row">
                 <div class="container" style="color: green; height: 100%;">
@@ -68,9 +68,9 @@
                     </div>
                 </div>
             </div> -->
-    
-    
-    
+
+
+
             <!-- Services -->
             <div class="container">
                 <h3 id="section-services">Services</h3>
@@ -82,9 +82,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Design</h4>
-                                <p>Lorem ipsum dolor sit amet sed varius suspendisse mattis. Malesuada vel gravida. Eu et vivamus
-                                    perferendis molestie lacus pede viverra sed. Etiam proident placerat. Risus condimentum sit
-                                    sapien commodo ligula vel nisl in.</p>
+                                <p>Whether you already have a design in mind or need a little extra input, we can help!</p>
                             </div>
                         </div>
                     </div>
@@ -95,8 +93,7 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Installation</h4>
-                                <p>Lorem ipsum dolor sit amet sed varius suspendisse mattis. Malesuada vel gravida. Eu et vivamus
-                                    perferendis molestie lacus pede viverra sed..</p>
+                                <p>We meticulously and effeciently install our work in any given space.</p>
                             </div>
                         </div>
                     </div>
@@ -107,15 +104,13 @@
                             </div>
                             <div class="media-body">
                                 <h4 class="media-heading">Repair</h4>
-                                <p>Lorem ipsum dolor sit amet sed varius suspendisse mattis. Malesuada vel gravida. Eu et vivamus
-                                    perferendis molestie lacus pede viverra sed. Etiam proident placerat. Risus condimentum sit
-                                    sapien commodo ligula vel in.</p>
+                                <p>Every home that's lived in will need a little TLC.  We will expertly restore worn surfaces back to life.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
+
             <!-- Photo Gallery button start -->
             <div class="container">
                 <div class="row">
@@ -125,10 +120,10 @@
                     </div>
                 </div>
             </div>
-    
-    
+
+
             <!-- Photo Gallery button end -->
-    
+
             <!-- About Us -->
             <div class="container" id="section-about-us">
                 <div class="row">
@@ -138,12 +133,12 @@
                     </div>
                 </div>
             </div>
-    
-    
+
+
             <!-- Contact Us -->
             <div class="container" id="section-contact-us">
                 <h3>Contact Us</h3>
-    
+
                 <div class="row">
                     <div class="col-md-125">
                         <h4>Phone:
@@ -152,140 +147,165 @@
                     </div>
                 </div>
             </div>
-    
-    
-    
-    
-    
-    
-          
-    
+
+
+
+
+
+
+
+
         </div>
-       
-        
+
+
 
         <div class="container test-gallery hidden">
-            <button type="button" class="btn btn-primary" id="testGalleryBtn" >Back to Main</button>
 
-
-
-
-
-            <div class="container" id="photo-gallery-container">
-                <div class="row">
-                    <h1>Bootstrap 3 lightbox hidden gallery using modal</h1>
-                    <hr>
-    
-                    <div class="row">
-    
-                        <div class="col-12 col-md-4 col-sm-6">
-                            <a title="Image 1" href="#">
-                                <img class="thumbnail img-responsive" id="image-1" src="http://dummyimage.com/600x350/ccc/969696&amp;text=0xD10x810xD00xB50xD10x800xD10x8B0xD00xB9">
-                            </a>
-                        </div>
-    
-                        <div class="col-12 col-md-4 col-sm-6">
-                            <a title="Image 2" href="#">
-                                <img class="thumbnail img-responsive" id="image-2" src="http://dummyimage.com/600x350/2255EE/969696&amp;text=0xD10x810xD00xB80xD00xBD0xD00xB80xD00xB9">
-                            </a>
-    
-                        </div>
-                        <div class="col-12 col-md-4 col-sm-6">
-                            <a title="Image 3" href="#">
-                                <img class="thumbnail img-responsive" id="image-3" src="http://dummyimage.com/600x350/449955/FFF&amp;text=0xD00xB70xD00xB50xD00xBB0xD00xB50xD00xBD0xD10x8B0xD00xB9">
-                            </a>
-                        </div>
-                    </div>
-    
-                    <hr>
-                    <button type="button" class="btn btn-primary" >Back to Main</button>
-                </div>
+            <h2>PORTFOLIO</h2>
+            <div id="myBtnContainer">
+                <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+                <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+                <button class="btn" onclick="filterSelection('people')"> People</button>
             </div>
-    
-            <div class="hidden" id="img-repo">
-    
-                <!-- #image-1 -->
-                <div class="item" id="image-1">
-                    <img class="thumbnail img-responsive" title="Image 11" src="http://dummyimage.com/600x350/ccc/969696">
-                </div>
-                <div class="item" id="image-1">
-                    <img class="thumbnail img-responsive" title="Image 12" src="http://dummyimage.com/600x600/ccc/969696">
-                </div>
-                <div class="item" id="image-1">
-                    <img class="thumbnail img-responsive" title="Image 13" src="http://dummyimage.com/300x300/ccc/969696">
-                </div>
-    
-                <!-- #image-2 -->
-                <div class="item" id="image-2">
-                    <img class="thumbnail img-responsive" title="Image 21" src="http://dummyimage.com/600x350/2255EE/969696">
-                </div>
-                <div class="item" id="image-2">
-                    <img class="thumbnail img-responsive" title="Image 21" src="http://dummyimage.com/600x600/2255EE/969696">
-                </div>
-                <div class="item" id="image-2">
-                    <img class="thumbnail img-responsive" title="Image 23" src="http://dummyimage.com/300x300/2255EE/969696">
-                </div>
-    
-                <!-- #image-3-->
-                <div class="item" id="image-3">
-                    <img class="thumbnail img-responsive" title="Image 31" src="http://dummyimage.com/600x350/449955/FFF">
-                </div>
-                <div class="item" id="image-3">
-                    <img class="thumbnail img-responsive" title="Image 32" src="http://dummyimage.com/600x600/449955/FFF">
-                </div>
-                <div class="item" id="image-3">
-                    <img class="thumbnail img-responsive" title="Image 33" src="http://dummyimage.com/300x300/449955/FFF">
-                </div>
-    
-            </div>
-    
-            <div class="modal" id="modal-gallery" role="dialog">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button class="close" type="button" data-dismiss="modal">×</button>
-                            <h3 class="modal-title"></h3>
-                        </div>
-                        <div class="modal-body">
-                            <div id="modal-carousel" class="carousel">
-    
-                                <div class="carousel-inner">
-                                </div>
-    
-                                <a class="carousel-control left" href="#modal-carousel" data-slide="prev">
-                                    <i class="glyphicon glyphicon-chevron-left"></i>
-                                </a>
-                                <a class="carousel-control right" href="#modal-carousel" data-slide="next">
-                                    <i class="glyphicon glyphicon-chevron-right"></i>
-                                </a>
-    
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
+
+            <!-- Portfolio Gallery Grid -->
+            <!-- go through danny's pictures and sort them into separate Kitchen and Bathroom folders-->
+            <div class="row">
+                <div class="column nature">
+                    <div class="content">
+                        <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+                        <h4>Mountains</h4>
+                        <p>Lorem ipsum dolor..</p>
                     </div>
                 </div>
+                <div class="column nature">
+                    <div class="content">
+                        <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+                        <h4>Lights</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column nature">
+                    <div class="content">
+                        <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
+                        <h4>Forest</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+
+                <div class="column cars">
+                    <div class="content">
+                        <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+                        <h4>Retro</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column cars">
+                    <div class="content">
+                        <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+                        <h4>Fast</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column cars">
+                    <div class="content">
+                        <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+                        <h4>Classic</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+
+                <div class="column people">
+                    <div class="content">
+                        <img src="/w3images/people1.jpg" alt="People" style="width:100%">
+                        <h4>Girl</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column people">
+                    <div class="content">
+                        <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+                        <h4>Man</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <div class="column people">
+                    <div class="content">
+                        <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+                        <h4>Woman</h4>
+                        <p>Lorem ipsum dolor..</p>
+                    </div>
+                </div>
+                <!-- END GRID -->
             </div>
-        </div>
 
 
 
 
-        <!-- 
+            <!-- 
         <footer class="footer">
             <div class="container">
                 <span>ΙΧΘΥΣ</span>
             </div>
         </footer> -->
 
-    </div>
+        </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="scripts\script.js"></script>
+        <script src="scripts\script.js"></script>
+        <script type="text/javascript">
+            filterSelection("all") // Execute the function and show all columns
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("column");
+                if (c == "all") c = "";
+                // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+            }
+
+            // Show filtered elements
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) == -1) {
+                        element.className += " " + arr2[i];
+                    }
+                }
+            }
+
+            // Hide elements that are not selected
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
 
 </body>
 
