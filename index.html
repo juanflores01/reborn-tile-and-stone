@@ -154,7 +154,7 @@
             <div class="container">
                 <button type="button" class="btn btn-primary pull-left" style="color:black;" id="testGalleryBtn">Back</button>
                 <div class="btn-group pull-right">
-                    <button class="btn">Please Select From List</button>
+                    <button class="btn" id="btnText">Please Select From List</button>
                     <button class="btn dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                     </button>
@@ -283,8 +283,12 @@
                 $(function () {
 
                     $(".dropdown-menu").on('click', 'li a', function () {
-                        $(".btn:first-child").text($(this).text());
-                        $(".btn:first-child").val($(this).text());
+                        // $(".btn:first-child").text($(this).text());
+                        // $(".btn:first-child").val($(this).text());
+
+                        $("#btnText").text($(this).text());
+                        $("#btnText").val($(this).text());
+
                     });
 
                 });
