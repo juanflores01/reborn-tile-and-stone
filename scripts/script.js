@@ -7,13 +7,10 @@ $(document).ready(function () {
     $("#testGalleryBtn").on("click", reborn.backToMain);
     reborn.runLightBoxGallery();
     reborn.runFilteredGallery();
-
-
-
 });
 
 reborn.togglePhototGallery = function (event) {
-    console.log("Cholas are here!");
+
     $(".main-page").addClass("hidden");
     $(".test-gallery").removeClass("hidden");
     // $('html, body').animate({ scrollTop: 0 }, 'fast');
@@ -21,7 +18,6 @@ reborn.togglePhototGallery = function (event) {
 }
 
 // reborn.togglePhototGallery2 = function (event) {
-//     console.log("Cholas are here!");
 //     $(".main-page").addClass("hidden");
 //     $(".test-gallery").removeClass("hidden");
 // }

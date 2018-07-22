@@ -26,7 +26,7 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-          
+
                     <li>
                         <a href="#section-services">Services</a>
                     </li>
@@ -55,7 +55,7 @@
             <div class="Kantainer">
                 <div class="jumbotron">
                     <!-- <h1 style="word-wrap: normal">Reborn Tile & Stone</h1> -->
-                    <h1 style="white-space: normal">Reborn Tile & Stone</h1>
+                    <h1 id="jumbo-title">Reborn Tile & Stone</h1>
                     <p>Serving the Southland for over 20 years.</p>
                 </div>
             </div>
@@ -134,7 +134,7 @@
                     </div>
                 </div>
             </div>
-        </div>     
+        </div>
 
         <div class="bucktainer test-gallery hidden">
 
@@ -220,6 +220,50 @@
             </div>
 
             <div class="row">
+                <div class="col-md-4 column bathroom">
+                    <div class="content thumbnail">
+                        <img width="100%" id="1" data-toggle="modal" data-target="#myModal" src='images/bathroom/IMG_4134.JPG' />
+
+                    </div>
+                </div>
+                <div class="col-md-4 column bathroom">
+                    <div class="content thumbnail">
+                        <img width="100%" id="2" data-toggle="modal" data-target="#myModal" src='images/bathroom/IMG_4135.JPG' />
+
+                    </div>
+                </div>
+                <div class="col-md-4 column bathroom">
+                    <div class="content thumbnail">
+                        <img width="100%" id="2" data-toggle="modal" data-target="#myModal" src='images/bathroom/IMG_4136.JPG' />
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4 column bathroom">
+                    <div class="content thumbnail">
+                        <img width="100%" id="1" data-toggle="modal" data-target="#myModal" src='images/bathroom/IMG_4137.JPG' />
+
+                    </div>
+                </div>
+                <div class="col-md-4 column bathroom">
+                    <div class="content thumbnail">
+                        <img width="100%" id="2" data-toggle="modal" data-target="#myModal" src='images/bathroom/IMG_4138.JPG' />
+
+                    </div>
+                </div>
+                <div class="col-md-4 column bathroom">
+                    <div class="content thumbnail">
+                        <img width="100%" id="2" data-toggle="modal" data-target="#myModal" src='images/bathroom/IMG_4139.JPG' />
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
                 <div class="col-md-4 column kitchen">
                     <div class="content thumbnail">
                         <img width="100%" id="1" data-toggle="modal" data-target="#myModal" src='images/kitchen/IMG_3396.JPG' />
@@ -248,6 +292,9 @@
             <div id="myModal" class="modal fade" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
+                        <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
                         <div class="modal-body">
                             <img class="img-responsive" src="" />
                         </div>
@@ -259,104 +306,100 @@
             </div>
             <!-- MODAL EXPERIMENT 2 END  -->
 
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div>
+            <span>ΙΧΘΥΣ</span>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="scripts\script.js"></script>
+
+    <script type="text/javascript">
+
+        // DROPDOWN MENU SELECTED VALUE EXPERIMENT START
+        $(function () {
+
+            $(".dropdown-menu").on('click', 'li a', function () {
+                // $(".btn:first-child").text($(this).text());
+                // $(".btn:first-child").val($(this).text());
+
+                $("#btnText").text($(this).text());
+                $("#btnText").val($(this).text());
+
+            });
+
+        });
+        // DROPDOWN MENU SELECTED VALUE EXPERIMENT END
+
+
+        // MODAL EXPERIMENT 2 START (keep this)
+        $(document).ready(function () {
+            $('#myModal').on('show.bs.modal', function (e) {
+                var image = $(e.relatedTarget).attr('src');
+                $(".img-responsive").attr("src", image);
+            });
+        });
+        // MODAL EXPERIMENT 2 END
 
 
 
-            <!-- 
-        <footer class="footer">
-            <div class="container">
-                <span>ΙΧΘΥΣ</span>
-            </div>
-        </footer> -->
+        // FILTER START
+        filterSelection("all") // Execute the function and show all columns
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
 
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-            <script src="scripts\script.js"></script>
-
-            <script type="text/javascript">
-
-                // DROPDOWN MENU SELECTED VALUE EXPERIMENT START
-                $(function () {
-
-                    $(".dropdown-menu").on('click', 'li a', function () {
-                        // $(".btn:first-child").text($(this).text());
-                        // $(".btn:first-child").val($(this).text());
-
-                        $("#btnText").text($(this).text());
-                        $("#btnText").val($(this).text());
-
-                    });
-
-                });
-                // DROPDOWN MENU SELECTED VALUE EXPERIMENT END
-
-
-                // MODAL EXPERIMENT 2 START (keep this)
-                $(document).ready(function () {
-                    $('#myModal').on('show.bs.modal', function (e) {
-                        var image = $(e.relatedTarget).attr('src');
-                        $(".img-responsive").attr("src", image);
-                    });
-                });
-                // MODAL EXPERIMENT 2 END
-
-
-
-                // FILTER START
-                filterSelection("all") // Execute the function and show all columns
-                function filterSelection(c) {
-                    var x, i;
-                    x = document.getElementsByClassName("column");
-                    if (c == "all") c = "";
-                    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-                    for (i = 0; i < x.length; i++) {
-                        w3RemoveClass(x[i], "show");
-                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-                    }
+        // Show filtered elements
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
                 }
+            }
+        }
 
-                // Show filtered elements
-                function w3AddClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        if (arr1.indexOf(arr2[i]) == -1) {
-                            element.className += " " + arr2[i];
-                        }
-                    }
+        // Hide elements that are not selected
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
                 }
+            }
+            element.className = arr1.join(" ");
+        }
 
-                // Hide elements that are not selected
-                function w3RemoveClass(element, name) {
-                    var i, arr1, arr2;
-                    arr1 = element.className.split(" ");
-                    arr2 = name.split(" ");
-                    for (i = 0; i < arr2.length; i++) {
-                        while (arr1.indexOf(arr2[i]) > -1) {
-                            arr1.splice(arr1.indexOf(arr2[i]), 1);
-                        }
-                    }
-                    element.className = arr1.join(" ");
-                }
-
-                // Add active class to the current button (highlight it)
-                var btnContainer = document.getElementById("myBtnContainer");
-                var btns = btnContainer.getElementsByClassName("btn");
-                for (var i = 0; i < btns.length; i++) {
-                    btns[i].addEventListener("click", function () {
-                        var current = document.getElementsByClassName("active");
-                        current[0].className = current[0].className.replace(" active", "");
-                        this.className += " active";
-                    });
-                }
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
                 // FILTER END
-
-
-
-            </script>
-
+    </script>
 </body>
 
 </html>
