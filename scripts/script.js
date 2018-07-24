@@ -3,7 +3,6 @@ var reborn = {};
 $(document).ready(function () {
 
     $("#photoGalleryBtn").on("click", reborn.togglePhototGallery);
-    // $("#toGalleryFromNavbar").on("click", reborn.togglePhototGallery2);
     $("#testGalleryBtn").on("click", reborn.backToMain);
     reborn.runLightBoxGallery();
     reborn.runFilteredGallery();
@@ -13,14 +12,8 @@ reborn.togglePhototGallery = function (event) {
 
     $(".main-page").addClass("hidden");
     $(".test-gallery").removeClass("hidden");
-    // $('html, body').animate({ scrollTop: 0 }, 'fast');
     $('html,body').scrollTop(0);
 }
-
-// reborn.togglePhototGallery2 = function (event) {
-//     $(".main-page").addClass("hidden");
-//     $(".test-gallery").removeClass("hidden");
-// }
 
 reborn.backToMain = function () {
     $(".test-gallery").addClass("hidden");
@@ -61,7 +54,6 @@ reborn.runLightBoxGallery = function () {
     });
 
 }
-
 
 reborn.runFilteredGallery = function () {
     console.log("this is the filtered gallery function");
