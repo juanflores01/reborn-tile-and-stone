@@ -1,7 +1,6 @@
 var reborn = {};
 
 $(document).ready(function () {
-
     $("#photoGalleryBtn").on("click", reborn.togglePhototGallery);
     $("#testGalleryBtn").on("click", reborn.backToMain);
     reborn.runLightBoxGallery();
@@ -11,7 +10,6 @@ $(document).ready(function () {
         var image = $(e.relatedTarget).attr('src');
         $(".img-responsive").attr("src", image);
     });
-
 });
 
 reborn.togglePhototGallery = function (event) {
