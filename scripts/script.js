@@ -13,7 +13,6 @@ $(document).ready(function () {
 });
 
 reborn.togglePhototGallery = function (event) {
-
     $(".main-page").addClass("hidden");
     $(".test-gallery").removeClass("hidden");
     $('html,body').scrollTop(0);
