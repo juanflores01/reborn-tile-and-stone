@@ -35,7 +35,7 @@ reborn.runLightBoxGallery = function () {
                 .attr("title"));
     });
 
-    /* when clicking a thumbnail  */
+    /* when clicking a thumbnail */
     $(".row .thumbnail").click(function () {
         var content = $(".carousel-inner");
         var title = $(".modal-title");
