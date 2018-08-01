@@ -52,7 +52,7 @@ reborn.runLightBoxGallery = function () {
         title.html(active.find("img").attr("title"));
         content.append(repoCopy);
 
-        //   show the modal
+        // show the modal
         $("#modal-gallery").modal("show");
     });
 
