@@ -68,7 +68,9 @@ h3 {
 }
 h1 {
     font-size: 50px;
-    word-break: break-all;
+    /* word-break: break-all; */
+    word-wrap:break-word;
+
 }
 .row {
     margin: 8px -16px;
