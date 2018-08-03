@@ -1,2 +1,4 @@
 << BUGS >>
 
+* Navbar hamburger > have it close when something is selected.
+* Navbar links 

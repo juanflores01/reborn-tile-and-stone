@@ -3,6 +3,13 @@ var reborn = {};
 $(document).ready(function () {
     $("#photoGalleryBtn").on("click", reborn.togglePhototGallery);
     $("#testGalleryBtn").on("click", reborn.backToMain);
+
+    // i can probably consolidate these by targeting the <a> tag.
+    $("#link-service").on("click", reborn.checkMainStatus);
+    $("#link-see-our-work").on("click", reborn.checkMainStatus);
+    $("#link-about-us").on("click", reborn.checkMainStatus);
+
+
     reborn.runLightBoxGallery();
     reborn.runFilteredGallery();
 
@@ -10,21 +17,69 @@ $(document).ready(function () {
         var image = $(e.relatedTarget).attr('src');
         $(".img-responsive").attr("src", image);
     });
+
+
 });
+
+
+
+
+
+reborn.checkMainStatus = function (event) {
+    event.preventDefault();  // i may or maynot need this.
+    console.log("you clicked a nav-bar link");
+    if (!$(".main-page").hasClass("hidden")) {
+        console.log("the main page IS DISPLAYED");
+        $('html,body').scrollTop(600); 
+        $("#section-about-us").css('background','#8ec252');
+
+    } else {
+        console.log("the main page IS HIDDEN");
+        reborn.backToMainAboutUs();
+    }
+
+}
 
 reborn.togglePhototGallery = function (event) {
     $(".main-page").addClass("hidden");
     $(".test-gallery").removeClass("hidden");
     $('html,body').scrollTop(0);
+
 }
 
 reborn.backToMain = function () {
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
+    console.log("this is the Back To Main function.")
 }
 
+// reborn.backToMainServices = function () {
+//     $(".test-gallery").addClass("hidden");
+//     $(".main-page").removeClass("hidden");
+//     // add link
+//     // href="#section-services"
+// }
+
+// reborn.backToMainSeeOurWork = function () {
+//     $(".test-gallery").addClass("hidden");
+//     $(".main-page").removeClass("hidden");
+//     // add link
+// }
+
+reborn.backToMainAboutUs = function () {
+
+    $(".test-gallery").addClass("hidden");
+    $(".main-page").removeClass("hidden");
+    // add link
+    $("#section-about-us").css('background','yellow');
+    $('html,body').scrollTop(600);  // this is a messy work around.
+    console.log("back to main > about us div.");
+}
+
+
+
 reborn.runLightBoxGallery = function () {
-    /* activate the carousel */ 
+    /* activate the carousel */
     $("#modal-carousel").carousel({ interval: false });
 
     /* change modal title when slide changes */
@@ -72,7 +127,7 @@ $(function () {
     });
 });
 
-filterSelection("all") 
+filterSelection("all")
 function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("column");
