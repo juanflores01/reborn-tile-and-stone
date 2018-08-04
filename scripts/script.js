@@ -5,9 +5,9 @@ $(document).ready(function () {
     $("#testGalleryBtn").on("click", reborn.backToMain);
 
     // i can probably consolidate these by targeting the <a> tag.
-    $("#link-service").on("click", reborn.checkMainStatus);
-    $("#link-see-our-work").on("click", reborn.checkMainStatus);
-    $("#link-about-us").on("click", reborn.checkMainStatus);
+    $("#link-service").on("click", reborn.checkMainStatusForService);
+    $("#link-see-our-work").on("click", reborn.checkMainStatusForSeeOurWork);
+    $("#link-about-us").on("click", reborn.checkMainStatusForAboutUs);
 
 
     reborn.runLightBoxGallery();
@@ -17,27 +17,49 @@ $(document).ready(function () {
         var image = $(e.relatedTarget).attr('src');
         $(".img-responsive").attr("src", image);
     });
-
-
 });
 
 
 
+reborn.checkMainStatusForService = function(event){
+    event.preventDefault();
+    if (!$('.main-page').hasClass("hidden")){
+        $('html, body').animate({
+            scrollTop: ($('#section-service').offset().top)
+        }, 100);
+        $('#section-service').css('background', 'red');
+    } else {
+        reborn.backToMainServices();
+    }
+}
 
+reborn.checkMainStatusForSeeOurWork = function (event) {
+    event.preventDefault();  // i may or maynot need this.
+    if (!$(".main-page").hasClass("hidden")) {
+        $('html, body').animate({
+            scrollTop: ($('#section-see-our-work').offset().top)
+        },100);
+        $("#section-see-our-work").css('background','#8ec252');
+    } else {
+        reborn.backToMainSeeOurWork();
+    }
+}
 
-reborn.checkMainStatus = function (event) {
+reborn.checkMainStatusForAboutUs = function(event){
     event.preventDefault();  // i may or maynot need this.
     console.log("you clicked a nav-bar link");
     if (!$(".main-page").hasClass("hidden")) {
         console.log("the main page IS DISPLAYED");
-        $('html,body').scrollTop(600); 
-        $("#section-about-us").css('background','#8ec252');
+        $('html, body').animate({
+            scrollTop: ($('#section-about-us').offset().top)
+        },100);
+
+        $("#section-about-sus").css('background','#8ec252');
 
     } else {
         console.log("the main page IS HIDDEN");
         reborn.backToMainAboutUs();
     }
-
 }
 
 reborn.togglePhototGallery = function (event) {
@@ -53,30 +75,40 @@ reborn.backToMain = function () {
     console.log("this is the Back To Main function.")
 }
 
-// reborn.backToMainServices = function () {
-//     $(".test-gallery").addClass("hidden");
-//     $(".main-page").removeClass("hidden");
-//     // add link
-//     // href="#section-services"
-// }
+reborn.backToMainServices = function () {
+    $(".test-gallery").addClass("hidden");
+    $(".main-page").removeClass("hidden");
 
-// reborn.backToMainSeeOurWork = function () {
-//     $(".test-gallery").addClass("hidden");
-//     $(".main-page").removeClass("hidden");
-//     // add link
-// }
+    console.log("this is the Back To Main via Services Link.");
+}
 
-reborn.backToMainAboutUs = function () {
+reborn.backToMainSeeOurWork = function () {
 
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
-    // add link
-    $("#section-about-us").css('background','yellow');
-    $('html,body').scrollTop(600);  // this is a messy work around.
-    console.log("back to main > about us div.");
+
+    $("#section-see-our-work").css('background','yellow');
+
+    $('html, body').animate({
+        scrollTop: ($('#section-see-our-work').offset().top)
+    },100);
+
+    console.log("back to main > see-our-work div.");
 }
 
+reborn.backToMainAboutUs = function(){
+    
+    $(".test-gallery").addClass("hidden");
+    $(".main-page").removeClass("hidden");
 
+    $("#section-about-us").css('background','yellow');
+
+    $('html, body').animate({
+        scrollTop: ($('#section-about-us').offset().top)
+    },100);
+
+    console.log("back to main > about-us div.");
+}
 
 reborn.runLightBoxGallery = function () {
     /* activate the carousel */
