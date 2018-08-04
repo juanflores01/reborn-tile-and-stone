@@ -19,49 +19,6 @@ $(document).ready(function () {
     });
 });
 
-
-
-reborn.checkMainStatusForService = function(event){
-    event.preventDefault();
-    if (!$('.main-page').hasClass("hidden")){
-        $('html, body').animate({
-            scrollTop: ($('#section-service').offset().top)
-        }, 100);
-        $('#section-service').css('background', 'red');
-    } else {
-        reborn.backToMainServices();
-    }
-}
-
-reborn.checkMainStatusForSeeOurWork = function (event) {
-    event.preventDefault();  // i may or maynot need this.
-    if (!$(".main-page").hasClass("hidden")) {
-        $('html, body').animate({
-            scrollTop: ($('#section-see-our-work').offset().top)
-        },100);
-        $("#section-see-our-work").css('background','#8ec252');
-    } else {
-        reborn.backToMainSeeOurWork();
-    }
-}
-
-reborn.checkMainStatusForAboutUs = function(event){
-    event.preventDefault();  // i may or maynot need this.
-    console.log("you clicked a nav-bar link");
-    if (!$(".main-page").hasClass("hidden")) {
-        console.log("the main page IS DISPLAYED");
-        $('html, body').animate({
-            scrollTop: ($('#section-about-us').offset().top)
-        },100);
-
-        $("#section-about-sus").css('background','#8ec252');
-
-    } else {
-        console.log("the main page IS HIDDEN");
-        reborn.backToMainAboutUs();
-    }
-}
-
 reborn.togglePhototGallery = function (event) {
     $(".main-page").addClass("hidden");
     $(".test-gallery").removeClass("hidden");
@@ -75,38 +32,73 @@ reborn.backToMain = function () {
     console.log("this is the Back To Main function.")
 }
 
+reborn.checkMainStatusForService = function(event){
+    event.preventDefault();
+    if (!$('.main-page').hasClass("hidden")){
+        console.log("the main page IS DISPLAYED");
+        $('html, body').animate({
+            scrollTop: ($('#section-services').offset().top)
+        }, 100);
+        // $('#section-services').css('background', 'red');
+    } else {
+        reborn.backToMainServices();
+    }
+}
+
+reborn.checkMainStatusForSeeOurWork = function (event) {
+    event.preventDefault(); 
+    if (!$(".main-page").hasClass("hidden")) {
+        console.log("the main page IS DISPLAYED");
+        $('html, body').animate({
+            scrollTop: ($('#section-see-our-work').offset().top)
+        },100);
+        // $("#section-see-our-work").css('background','#8ec252');
+    } else {
+        reborn.backToMainSeeOurWork();
+    }
+}
+
+reborn.checkMainStatusForAboutUs = function(event){
+    event.preventDefault(); 
+    if (!$(".main-page").hasClass("hidden")) {
+        console.log("the main page IS DISPLAYED");
+        $('html, body').animate({
+            scrollTop: ($('#section-about-us').offset().top)
+        },100);
+        // $("#section-about-sus").css('background','#8ec252');
+    } else {
+        console.log("the main page IS HIDDEN");
+        reborn.backToMainAboutUs();
+    }
+}
+
 reborn.backToMainServices = function () {
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
-
+    // $("#section-services").css('background','brown');
+    $('html, body').animate({
+        scrollTop: ($('#section-services').offset().top)
+    },100);
     console.log("this is the Back To Main via Services Link.");
 }
 
 reborn.backToMainSeeOurWork = function () {
-
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
-
-    $("#section-see-our-work").css('background','yellow');
-
+    // $("#section-see-our-work").css('background','yellow');
     $('html, body').animate({
         scrollTop: ($('#section-see-our-work').offset().top)
     },100);
-
     console.log("back to main > see-our-work div.");
 }
 
 reborn.backToMainAboutUs = function(){
-    
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
-
-    $("#section-about-us").css('background','yellow');
-
+    // $("#section-about-us").css('background','yellow');
     $('html, body').animate({
         scrollTop: ($('#section-about-us').offset().top)
     },100);
-
     console.log("back to main > about-us div.");
 }
 
