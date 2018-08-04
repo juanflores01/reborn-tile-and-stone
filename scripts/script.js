@@ -8,6 +8,7 @@ $(document).ready(function () {
     $("#link-service").on("click", reborn.checkMainStatusForService);
     $("#link-see-our-work").on("click", reborn.checkMainStatusForSeeOurWork);
     $("#link-about-us").on("click", reborn.checkMainStatusForAboutUs);
+    $("#link-home").on("click", reborn.checkMainStatusForHome);
 
 
     reborn.runLightBoxGallery();
@@ -31,14 +32,28 @@ reborn.backToMain = function () {
     $(".main-page").removeClass("hidden");
     console.log("this is the Back To Main function.")
 }
+// CHECK STATUS FOR HOME
+reborn.checkMainStatusForHome = function(event){
+    event.preventDefault(); 
+    if (!$(".main-page").hasClass("hidden")) {
+        console.log("Are we scrolled to the top?");
+        $('html, body').animate({
+            // scrollTop: ($('.main-page').offset().top)
+            scrollTop: 0
+        }, 75);
+    } else {
+        // console.log("the main page IS HIDDEN");
+        reborn.backToMainHome();
+    }
+}
 
 reborn.checkMainStatusForService = function(event){
     event.preventDefault();
     if (!$('.main-page').hasClass("hidden")){
         console.log("the main page IS DISPLAYED");
         $('html, body').animate({
-            scrollTop: ($('#section-services').offset().top)
-        }, 100);
+            scrollTop: ($('#section-services').offset().top) -90  
+        }, 75);
         // $('#section-services').css('background', 'red');
     } else {
         reborn.backToMainServices();
@@ -50,8 +65,8 @@ reborn.checkMainStatusForSeeOurWork = function (event) {
     if (!$(".main-page").hasClass("hidden")) {
         console.log("the main page IS DISPLAYED");
         $('html, body').animate({
-            scrollTop: ($('#section-see-our-work').offset().top)
-        },100);
+            scrollTop: ($('#section-see-our-work').offset().top) -60
+        }, 75);
         // $("#section-see-our-work").css('background','#8ec252');
     } else {
         reborn.backToMainSeeOurWork();
@@ -63,13 +78,22 @@ reborn.checkMainStatusForAboutUs = function(event){
     if (!$(".main-page").hasClass("hidden")) {
         console.log("the main page IS DISPLAYED");
         $('html, body').animate({
-            scrollTop: ($('#section-about-us').offset().top)
-        },100);
+            scrollTop: ($('#section-about-us').offset().top) -60
+        }, 75);
         // $("#section-about-sus").css('background','#8ec252');
     } else {
         console.log("the main page IS HIDDEN");
         reborn.backToMainAboutUs();
     }
+}
+// BACK TO MAIN HOME
+reborn.backToMainHome = function(){
+    $(".test-gallery").addClass("hidden");
+    $(".main-page").removeClass("hidden");
+    // $('html, body').animate({
+    //     scrollTop: ($('#').offset().top)
+    // },100);
+    // console.log("back to main > home.");
 }
 
 reborn.backToMainServices = function () {
@@ -77,8 +101,8 @@ reborn.backToMainServices = function () {
     $(".main-page").removeClass("hidden");
     // $("#section-services").css('background','brown');
     $('html, body').animate({
-        scrollTop: ($('#section-services').offset().top)
-    },100);
+        scrollTop: ($('#section-services').offset().top) -90
+    }, 75);
     console.log("this is the Back To Main via Services Link.");
 }
 
@@ -87,8 +111,8 @@ reborn.backToMainSeeOurWork = function () {
     $(".main-page").removeClass("hidden");
     // $("#section-see-our-work").css('background','yellow');
     $('html, body').animate({
-        scrollTop: ($('#section-see-our-work').offset().top)
-    },100);
+        scrollTop: ($('#section-see-our-work').offset().top) -60
+    }, 75);
     console.log("back to main > see-our-work div.");
 }
 
@@ -97,10 +121,12 @@ reborn.backToMainAboutUs = function(){
     $(".main-page").removeClass("hidden");
     // $("#section-about-us").css('background','yellow');
     $('html, body').animate({
-        scrollTop: ($('#section-about-us').offset().top)
-    },100);
+        scrollTop: ($('#section-about-us').offset().top) -60
+    }, 75);
     console.log("back to main > about-us div.");
 }
+
+
 
 reborn.runLightBoxGallery = function () {
     /* activate the carousel */
