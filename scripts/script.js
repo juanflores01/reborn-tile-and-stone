@@ -3,13 +3,12 @@ var reborn = {};
 $(document).ready(function () {
     $("#photoGalleryBtn").on("click", reborn.togglePhototGallery);
     $("#testGalleryBtn").on("click", reborn.backToMain);
-
+    $("#link-home").on("click", reborn.closeHamburger);
     // i can probably consolidate these by targeting the <a> tag.
+    $("#link-home").on("click", reborn.checkMainStatusForHome);
     $("#link-service").on("click", reborn.checkMainStatusForService);
     $("#link-see-our-work").on("click", reborn.checkMainStatusForSeeOurWork);
     $("#link-about-us").on("click", reborn.checkMainStatusForAboutUs);
-    $("#link-home").on("click", reborn.checkMainStatusForHome);
-
 
     reborn.runLightBoxGallery();
     reborn.runFilteredGallery();
@@ -18,7 +17,22 @@ $(document).ready(function () {
         var image = $(e.relatedTarget).attr('src');
         $(".img-responsive").attr("src", image);
     });
+
+    $(function () {
+        var navMain = $("#myNavbar");
+        navMain.on("click", "a", null, function () {
+            navMain.collapse('hide');
+            console.log("this is within the navMain onClick funciton")
+        });
+    });
+
 });
+
+reborn.closeHamburger = function(){
+    var navMain = $("#myNavbar");
+    navMain.collapse('hide');
+    console.log("this is within the Reborn Link onClick funciton")
+}
 
 reborn.togglePhototGallery = function (event) {
     $(".main-page").addClass("hidden");
@@ -33,8 +47,8 @@ reborn.backToMain = function () {
     console.log("this is the Back To Main function.")
 }
 // CHECK STATUS FOR HOME
-reborn.checkMainStatusForHome = function(event){
-    event.preventDefault(); 
+reborn.checkMainStatusForHome = function (event) {
+    event.preventDefault();
     if (!$(".main-page").hasClass("hidden")) {
         console.log("Are we scrolled to the top?");
         $('html, body').animate({
@@ -42,52 +56,48 @@ reborn.checkMainStatusForHome = function(event){
             scrollTop: 0
         }, 75);
     } else {
-        // console.log("the main page IS HIDDEN");
         reborn.backToMainHome();
     }
 }
 
-reborn.checkMainStatusForService = function(event){
+reborn.checkMainStatusForService = function (event) {
     event.preventDefault();
-    if (!$('.main-page').hasClass("hidden")){
+    if (!$('.main-page').hasClass("hidden")) {
         console.log("the main page IS DISPLAYED");
         $('html, body').animate({
-            scrollTop: ($('#section-services').offset().top) -90  
+            scrollTop: ($('#section-services').offset().top) - 80
         }, 75);
-        // $('#section-services').css('background', 'red');
     } else {
         reborn.backToMainServices();
     }
 }
 
 reborn.checkMainStatusForSeeOurWork = function (event) {
-    event.preventDefault(); 
+    event.preventDefault();
     if (!$(".main-page").hasClass("hidden")) {
         console.log("the main page IS DISPLAYED");
         $('html, body').animate({
-            scrollTop: ($('#section-see-our-work').offset().top) -60
+            scrollTop: ($('#section-see-our-work').offset().top) - 55
         }, 75);
-        // $("#section-see-our-work").css('background','#8ec252');
     } else {
         reborn.backToMainSeeOurWork();
     }
 }
 
-reborn.checkMainStatusForAboutUs = function(event){
-    event.preventDefault(); 
+reborn.checkMainStatusForAboutUs = function (event) {
+    event.preventDefault();
     if (!$(".main-page").hasClass("hidden")) {
         console.log("the main page IS DISPLAYED");
         $('html, body').animate({
-            scrollTop: ($('#section-about-us').offset().top) -60
+            scrollTop: ($('#section-about-us').offset().top) - 55
         }, 75);
-        // $("#section-about-sus").css('background','#8ec252');
     } else {
         console.log("the main page IS HIDDEN");
         reborn.backToMainAboutUs();
     }
 }
 // BACK TO MAIN HOME
-reborn.backToMainHome = function(){
+reborn.backToMainHome = function () {
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
     // $('html, body').animate({
@@ -99,9 +109,8 @@ reborn.backToMainHome = function(){
 reborn.backToMainServices = function () {
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
-    // $("#section-services").css('background','brown');
     $('html, body').animate({
-        scrollTop: ($('#section-services').offset().top) -90
+        scrollTop: ($('#section-services').offset().top) - 90
     }, 75);
     console.log("this is the Back To Main via Services Link.");
 }
@@ -109,24 +118,20 @@ reborn.backToMainServices = function () {
 reborn.backToMainSeeOurWork = function () {
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
-    // $("#section-see-our-work").css('background','yellow');
     $('html, body').animate({
-        scrollTop: ($('#section-see-our-work').offset().top) -60
+        scrollTop: ($('#section-see-our-work').offset().top) - 60
     }, 75);
     console.log("back to main > see-our-work div.");
 }
 
-reborn.backToMainAboutUs = function(){
+reborn.backToMainAboutUs = function () {
     $(".test-gallery").addClass("hidden");
     $(".main-page").removeClass("hidden");
-    // $("#section-about-us").css('background','yellow');
     $('html, body').animate({
-        scrollTop: ($('#section-about-us').offset().top) -60
+        scrollTop: ($('#section-about-us').offset().top) - 60
     }, 75);
     console.log("back to main > about-us div.");
 }
-
-
 
 reborn.runLightBoxGallery = function () {
     /* activate the carousel */
@@ -224,3 +229,4 @@ for (var i = 0; i < btns.length; i++) {
         this.className += " active";
     });
 }
+
