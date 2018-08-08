@@ -1,4 +1,4 @@
 << BUGS >>
 
-* Navbar hamburger > have it close when something is selected.
-* Navbar links 
+* Try to center portrait pictures in modal window.
+* Try to refactor repeated functions.
